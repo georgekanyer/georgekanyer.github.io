@@ -1,0 +1,83 @@
+<!DOCTYPE html> 
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>About – George M. Kanyer Portfolio</title>
+  <link rel="icon" type="image/png" href="image">
+  <link rel="stylesheet" href="about.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body>
+  <div class="site-title">
+    <h1>George M. Kanyer Portfolio</h1>
+  </div>
+
+<nav>
+   <a href="index.html"><i class="fas fa-home"></i> Home</a>
+<a href="about.html"><i class="fas fa-user"></i> About</a>
+<a href="resume.html"><i class="fas fa-file-alt"></i> Resume</a>
+<a href="experience.html"><i class="fas fa-briefcase"></i> Experience</a>
+<a href="contact.html"><i class="fas fa-envelope"></i> Contact</a>
+<a href="blog.html"><i class="fas fa-comment-dots"></i> Blog</a>
+  </nav>
+
+  <div class="content">
+    <h2>About Me</h2>
+    <div class="intro-container">
+      <div class="intro-text">
+        <p>As a Seattleite born just South of the city, I developed a deep passion for creativity, technology, strategy, and storytelling as a young child. Even as a kid, I was a walking billboard, always wearing Mountain Dew and Dr. Pepper logos on my t-shirts without realizing I was already marketing.&nbsp; <em>&nbsp;</em> </p>
+        <p>Marketing became my clear career path after I ended up in a marketing class in high school by chance. I quickly realized that marketing  combined creativity, strategy, and technology in a way that  felt completely natural to me. <em>(And with Mark as my middle name, I figured it just made  sense..)</em></p>
+        <p>Outside of marketing, I enjoy staying active through swimming, resistance training and hiking, and I love traveling to discover new and exciting places. In my downtime, I immerse myself in video games, shows, movies, and music, and I value spending quality time with friends and family.</p>
+		  <p>I have a lot of new and interesting ideas for marketing that I would love to put to the test. I strongly desire to change the world of marketing for the better of all people around the world. I have found new ways that people could most effectively utilize Artificial Intelligence that will evolve the field of marketing for the better without replacing people.</p>
+
+        <!-- Skills Section -->
+        <div class="skills-section">
+          <blockquote>
+            <blockquote>
+              <blockquote>
+                <blockquote>
+                  <blockquote>
+                    <blockquote>
+        </div>
+      </div>
+      
+      <!-- Profile Image -->
+      <img src="images/headshot2.png" alt="Picture" class="profile-pic" id="profilePic">
+    </div>
+  </div>
+
+  <!-- Lightbox Overlay -->
+  <div class="lightbox" id="lightbox">
+    <img src="images/headshot2.png" alt="Enlarged Picture">
+  </div>
+
+</div>
+
+<footer class="contact-footer">
+    <div class="contact-header">
+      <h3><strong>Contact</strong></h3>
+    </div>
+  <div class="contact-linksbar">
+      <div class="footer-links">
+     <a href="mailto:Georgekanyer@gmail.com"><i class="fas fa-envelope"></i> Email</a>
+      <a href="https://www.linkedin.com/in/georgekanyer/" target="_blank"><i class="fab fa-linkedin"></i> LinkedIn</a>
+      <a href="https://github.com/Georgekanyer" target="_blank"><i class="fab fa-github"></i> GitHub</a>
+<a href="https://tacomauw.joinhandshake.com/profiles/Georgekanyer" target="_blank"><i class="fas fa-h-square"></i> Handshake</a>
+      </div>
+    </div>
+  </footer>
+
+  <script>
+    const profilePic = document.getElementById("profilePic");
+    const lightbox = document.getElementById("lightbox");
+
+    profilePic.addEventListener("click", () => {
+      lightbox.classList.add("show");
+    });
+
+    lightbox.addEventListener("click", () => {
+      lightbox.classList.remove("show");
+    });
+  </script>
+</body>
+</html>

@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>New AI Christmas Ads Fail to Capture the Holiday Spirit – G. Mark Kanyer Portfolio</title>
+  <link rel="icon" type="image/png" href="images/headshot1.png">
+  <link rel="stylesheet" href="New AI Christmas Ads Fail to Capture the Holiday Spirit.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body>
+  <div class="site-title">
+    <h1>George M. Kanyer Portfolio</h1>
+  </div>
+
+  <nav>
+    <a href="index.html"><i class="fas fa-home"></i> Home</a>
+    <a href="about.html"><i class="fas fa-user"></i> About</a>
+    <a href="resume.html"><i class="fas fa-file-alt"></i> Resume</a>
+    <a href="experience.html"><i class="fas fa-briefcase"></i> Experience</a>
+    <a href="contact.html"><i class="fas fa-envelope"></i> Contact</a>
+    <a href="blog.html"><i class="fas fa-comment-dots"></i> Blog</a>
+  </nav>
+
+  <div class="content">
+    <div class="post-container">
+      <div class="section-label">OPINION</div>
+      <h1 class="post-title">New AI Christmas Ads Fail to Capture the Holiday Spirit</h1>
+      <div class="post-meta">
+        <span class="meta-item">📅 December 16, 2025</span>
+        <span class="meta-item">👤 George Kanyer</span>
+        <span id="view-counter">👁️ 0 views</span>
+        <span class="meta-item">🏷️ Advertising, AI, Holiday Marketing</span>
+      </div>
+
+      <img src="images/Coca-Cola.png" alt="Coca-Cola Ad" class="blog-full-image">
+
+      <p class="lede"><strong>Christmas advertising is about emotion, nostalgia, and connection.</strong> It’s the warmth in the storytelling, the small imperfections, and the shared memories that make campaigns resonate with audiences year after year.</p>
+      <p>Yet this holiday season, major brands leaning heavily on AI have produced ads that feel hollow, technical, and emotionally disconnected. The backlash is widespread, proving that technology cannot replace the human touch in storytelling, especially when it comes to cherished traditions.</p>
+
+      <p class="byline"><em>By George Kanyer</em></p>
+
+      <h2>Coca-Cola’s Misstep</h2>
+      <p>Coca-Cola’s iconic “Holidays Are Coming” campaign is known for its warmth and nostalgia. This year, the AI-assisted ad has over 209,000 dislikes on YouTube, with viewers criticizing it as cold and soulless.</p>
+      <p>Despite last year’s backlash, the brand doubled down. The AI visuals, while technically polished, fail to capture the subtle human touches and imperfections that make holiday campaigns memorable.</p>
+
+      <h2>Verizon Fios and Audience Disconnect</h2>
+      <p>Verizon Fios’ Christmas ad, released through Discord, faced criticism for being sterile and unmistakably AI-generated. Younger audiences, especially Gen Z, quickly spotted the lack of authenticity.</p>
+      <p>The ad also struggled to create warmth or a sense of community. Social media amplified the gap between audience expectations and the cold execution of AI, showing that emotional connection can’t be automated.</p>
+      <img src="images/Verizon.PNG" alt="Verizon Ad" class="blog-full-image">
+
+      <h2>McDonald’s Pulls Its Campaign</h2>
+      <p>McDonald’s 2025 Christmas ad, also AI-assisted, faced backlash severe enough that the company removed it entirely. Fans noted that the brand usually excels at warmth and humor, but this version lacked both.</p>
+      <p>The removal underscores a key lesson: even large, trusted brands risk eroding audience trust if AI replaces genuine creative effort. Authenticity matters more than technical perfection.</p>
+      <img src="images/mcdonalds.webp" alt="McDonald's Ad" class="blog-full-image">
+
+      <h2>Why AI Falls Short</h2>
+      <p>AI can be a helpful tool, but it cannot replicate human emotion. Holiday ads work because of subtle imperfections, shared nostalgia, and human warmth—elements AI often misses.</p>
+      <p>Relying exclusively on AI risks alienating audiences and weakening emotional impact. Technology can assist creativity, but it cannot replace the storytelling that resonates with viewers.</p>
+
+      <h2>The Bottom Line</h2>
+      <p>Consumers want stories that feel real. Until brands use AI as a supporting tool rather than a replacement, backlash will continue. Emotion, authenticity, and connection remain at the heart of successful holiday campaigns.</p>
+      <p>Brands that respect tradition, understand their audience, and combine AI with human creativity will thrive. In the end, the holidays are about feeling, not just visuals.</p>
+
+    </div>
+  </div>
+
+  <footer>
+    <h3><strong>Contact</strong></h3>
+    <div class="footer-links">
+      <a href="mailto:Georgekanyer@gmail.com"><i class="fas fa-envelope"></i> Email</a>
+      <a href="https://www.linkedin.com/in/georgekanyer/" target="_blank"><i class="fab fa-linkedin"></i> LinkedIn</a>
+      <a href="https://github.com/georgekanyer" target="_blank"><i class="fab fa-github"></i> GitHub</a>
+      <a href="https://tacomauw.joinhandshake.com/profiles/georgekanyer" target="_blank"><i class="fas fa-h-square"></i> Handshake</a>
+    </div>
+  </footer>
+
+  <script>
+    // CountAPI view counter
+    const namespace = "portfolio"; // your namespace
+    const key = "blog-1"; // unique key for this post
+    fetch(`https://api.countapi.xyz/hit/${namespace}/${key}`)
+      .then(res => res.json())
+      .then(data => {
+        document.getElementById("view-counter").textContent = `👁️ ${data.value} views`;
+      })
+      .catch(err => console.error("CountAPI error:", err));
+  </script>
+</body>
+</html>

@@ -1,0 +1,258 @@
+@charset "utf-8";
+
+/* -------------------- GLOBAL -------------------- */
+html, body {
+  margin: 0;
+  padding: 0;
+  font-family: roboto, sans-serif;
+  background:
+    linear-gradient(to bottom,
+      rgba(2,77,43,0.85),
+      rgba(1,51,26,0.85),
+      rgba(1,38,19,0.85)),
+    url("images/seattlenight.webp") no-repeat center center fixed;
+  background-size: cover;
+  color: white;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+}
+
+/* -------------------- SITE TITLE -------------------- */
+.site-title {
+  background: linear-gradient(to right, #000000, #01331a, #004d26);
+  text-align: center;
+  padding: 20px;
+}
+.site-title h1 {
+  margin: 0;
+  font-size: 2.5em;
+  letter-spacing: 1px;
+}
+
+/* -------------------- NAVIGATION -------------------- */
+nav {
+  background: linear-gradient(to right, #aaaaaa, #cccccc, #eeeeee);
+  text-align: center;
+  padding: 10px 0;
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+}
+nav a {
+  color: #000;
+  margin: 0 15px;
+  text-decoration: none;
+  font-weight: bold;
+}
+nav a:hover {
+  text-decoration: underline;
+  color: #1faa59;
+}
+
+/* -------------------- RESUME BUTTON -------------------- */
+.resume-btn-container {
+  display: flex;
+  justify-content: center;
+  margin: 20px 0 50px 0;
+}
+.resume-btn {
+  display: inline-block;
+  padding: 14px 28px;
+  background: linear-gradient(to bottom, #00e676, #00a86b);
+  color: white;
+  font-size: 1.2em;
+  font-weight: bold;
+  border-radius: 8px;
+  text-decoration: none;
+  transition: background 0.3s ease, transform 0.2s ease;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2);
+}
+.resume-btn:hover {
+  background: linear-gradient(to bottom, #00c853, #008f5a);
+  transform: translateY(-2px);
+}
+
+/* -------------------- CONTENT -------------------- */
+.content {
+  flex: 1;
+  max-width: 1000px;
+  margin: auto;
+  padding: 40px 20px;
+}
+.content h2 {
+  font-size: 2em;
+  color: #00e676;
+  text-align: center;
+}
+
+/* -------------------- TIMELINE -------------------- */
+.timeline {
+  display: flex;
+  flex-direction: column;
+  gap: 60px;
+  margin: 30px auto;
+  position: relative;
+  padding: 0 40px;
+  width: 80%;
+  max-width: 900px;
+}
+.timeline::before {
+  content: '';
+  position: absolute;
+  left: 50%;
+  top: 0;
+  bottom: 0;
+  width: 3px;
+  background: #ffffff;
+  transform: translateX(-50%);
+  box-shadow: 0 0 10px #00e676;
+}
+
+/* -------------------- TIMELINE ITEM -------------------- */
+.timeline-item {
+  display: flex;
+  justify-content: space-between;
+  gap: 20px;
+  position: relative;
+}
+.timeline-item .dot {
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 18px;
+  height: 18px;
+  background: #00e676;
+  border: 3px solid white;
+  border-radius: 50%;
+  top: 8px;
+  box-shadow: 0 0 10px #00e676;
+}
+
+/* Left side text */
+.text {
+  flex: 1;
+  text-align: right;
+  padding-right: 30px;
+}
+.text h4 {
+  margin: 0;
+  color: #00e676;
+  font-size: 1.4em;
+}
+.text ul {
+  margin: 5px 0 0 0;
+  padding: 0;
+  list-style: disc inside;
+  font-size: 1.1em;
+  color: #ddd;
+}
+
+/* Right side date/image */
+.date-and-image {
+  flex: 1;
+  text-align: left;
+  padding-left: 30px;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+.date-and-image span {
+  font-size: 0.95em;
+  color: #ccc;
+}
+
+/* -------------------- IMAGE STYLING -------------------- */
+.image-row {
+  display: flex;
+  justify-content: center;
+  gap: 25px;
+  margin-top: 15px;
+  flex-wrap: wrap;
+}
+
+.image-thumb {
+  width: 60%;
+  max-height: 300px;
+  object-fit: contain;
+  background: rgba(255,255,255,0.05);
+  border-radius: 10px;
+  border: 1.5px solid #00e676;
+  box-shadow: 0 0 12px rgba(0,230,118,0.6);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  cursor: pointer;
+}
+.image-thumb:hover {
+  transform: scale(1.1);
+  box-shadow: 0 0 18px rgba(0,230,118,0.9);
+}
+
+/* -------------------- LIGHTBOX -------------------- */
+.lightbox {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: fixed;
+  top: 0; left: 0;
+  width: 100%; height: 100%;
+  background: rgba(0,0,0,0.9);
+  opacity: 0;
+  visibility: hidden;
+  transition: opacity 0.4s ease, visibility 0.4s ease;
+  z-index: 2000;
+}
+.lightbox.show {
+  opacity: 1;
+  visibility: visible;
+}
+.lightbox img {
+  max-width: 90%;
+  max-height: 90%;
+  border-radius: 15px;
+  border: 4px solid #004d26;
+  box-shadow: 0 0 30px 10px rgba(0,204,102,1);
+}
+
+/* -------------------- FOOTER -------------------- */
+footer {
+  text-align: center;
+  margin-top: 40px;
+}
+footer h3 {
+  background: linear-gradient(to right, #000000, #01331a, #004d26);
+  color: #fff;
+  margin: 0;
+  font-size: 1.4em;
+  font-weight: normal;
+  padding: 12px 0;
+}
+.footer-links {
+  background: linear-gradient(to right, #aaaaaa, #cccccc, #eeeeee);
+  display: flex;
+  justify-content: center;
+  gap: 25px;
+  flex-wrap: wrap;
+  padding: 20px;
+}
+.footer-links a {
+  color: #000;
+  text-decoration: none;
+  font-size: 1.1em;
+  font-weight: bold;
+}
+.footer-links a:hover {
+  color: #1faa59;
+  text-decoration: underline;
+}
+/* ---- FORCE ORIGINAL BULLET FORMAT ---- */
+.timeline .text ul {
+  list-style: disc outside;
+  padding-left: 22px;
+  margin: 8px 0;
+  text-align: left !important; /* force bullets + text to the left */
+}
+
+.timeline .text ul li {
+  margin: 6px 0;
+  white-space: normal; /* allow wrapping like before */
+}

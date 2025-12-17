@@ -1,0 +1,183 @@
+@charset "utf-8";
+
+/* -------------------- GLOBAL -------------------- */
+html, body {
+  margin: 0;
+  padding: 0;
+  font-family: roboto, sans-serif;
+  background:
+    linear-gradient(to bottom,
+      rgba(2,77,43,0.85),
+      rgba(1,51,26,0.85),
+      rgba(1,38,19,0.85)),
+    url("images/seattlenight.webp") no-repeat center center fixed;
+  background-size: cover;
+  color: white;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+}
+
+/* -------------------- SITE TITLE -------------------- */
+.site-title {
+  background: linear-gradient(to right, #000000, #01331a, #004d26);
+  text-align: center;
+  padding: 20px;
+}
+.site-title h1 {
+  margin: 0;
+  font-size: 2.5em;
+  letter-spacing: 1px;
+}
+
+/* -------------------- NAVIGATION -------------------- */
+nav {
+  background: linear-gradient(to right, #aaaaaa, #cccccc, #eeeeee);
+  text-align: center;
+  padding: 10px 0;
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+}
+nav a {
+  color: #000;
+  margin: 0 15px;
+  text-decoration: none;
+  font-weight: bold;
+}
+nav a:hover {
+  text-decoration: underline;
+  color: #1faa59;
+}
+
+/* -------------------- CONTACT SECTION -------------------- */
+#contact {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 40px 20px;
+}
+
+.contact-title {
+  font-size: 2.2em;
+  color: #00e676;
+  text-align: center;
+  margin-bottom: 30px;
+}
+
+/* Contact Form Box */
+.contact-form {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  width: 52%;
+  min-height: 22vh;
+  padding: 25px;
+  background: rgba(0,0,0,0.6);
+  border-left: 6px solid #00e676;
+  border-radius: 12px;
+  box-shadow: 0 6px 20px rgba(0,0,0,0.6);
+}
+
+/* Labels */
+.contact-form label {
+  font-weight: bold;
+  margin-bottom: 6px;
+  font-size: 1.1em;
+}
+
+/* Inputs */
+.contact-form input,
+.contact-form textarea {
+  width: 100%;
+  padding: 18px;
+  font-size: 1.1em;
+  border-radius: 10px;
+  border: 2px solid #ccc;
+  box-sizing: border-box;
+}
+
+/* Message box */
+.contact-form textarea {
+  flex: 1;
+  min-height: 200px;
+  resize: vertical;
+}
+
+/* Submit button */
+.contact-form button {
+  position: relative;
+  background: linear-gradient(to bottom, #00e676, #00a86b);
+  color: white;
+  font-weight: bold;
+  border: none;
+  cursor: pointer;
+  border-radius: 10px;
+  padding: 18px;
+  font-size: 1.2em;
+  transition: background 0.3s ease, transform 0.2s ease;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.contact-form button:hover {
+  background: linear-gradient(to bottom, #00c853, #008f5a);
+  transform: translateY(-2px);
+}
+.contact-form button .checkmark {
+  display: none;
+  font-size: 1.5em;
+  color: #ffffff;
+}
+
+/* Feedback text */
+#formFeedback {
+  font-size: 1.1em;
+  margin-top: 15px;
+  text-align: center;
+}
+
+/* -------------------- FOOTER -------------------- */
+footer {
+  text-align: center;
+  margin-top: 40px;
+}
+footer h3 {
+  background: linear-gradient(to right, #000000, #01331a, #004d26);
+  color: #fff;
+  margin: 0;
+  font-size: 1.4em;
+  font-weight: normal;
+  padding: 12px 0;
+}
+.footer-links {
+  background: linear-gradient(to right, #aaaaaa, #cccccc, #eeeeee);
+  display: flex;
+  justify-content: center;
+  gap: 25px;
+  flex-wrap: wrap;
+  padding: 20px;
+}
+.footer-links a {
+  color: #000;
+  text-decoration: none;
+  font-size: 1.1em;
+  font-weight: bold;
+}
+.footer-links a:hover {
+  color: #1faa59;
+  text-decoration: underline;
+}
+
+/* ---------- CHECKMARK DRAW EFFECT (STRAIGHT) ---------- */
+.checkmark.draw {
+  animation: checkmark 0.5s forwards ease-out;
+}
+
+@keyframes checkmark {
+  0% { transform: scale(0); }
+  70% { transform: scale(1.2); }
+  100% { transform: scale(1); }
+}
